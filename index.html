@@ -4,71 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3rd</title>
+    <!-- Include the Font Awesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Link to the custom font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap">
     <style>
-        /* CSS for centering and styling the button */
+        /* CSS for centering the button and styling it */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #333;
+            background-color: #333; /* Gray-black background color for the entire page */
         }
 
         .click-button {
-            padding: 20px; /* Adjust padding for mobile */
+            padding: 30px 60px; /* Increased padding for oblong shape */
             color: white;
             border: none;
             cursor: pointer;
-            background-color: transparent;
-            background-image: url('oks.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
+            background-color: transparent; /* Transparent background color */
+            background-image: url('oks.jpg'); /* Initial background image */
+            background-size: cover; /* Set the image dimensions */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            background-position: center center; /* Center the background image */
             text-align: center;
             position: relative;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            border-radius: 15px;
+            transition: all 0.3s ease; /* Smooth animation */
+            overflow: hidden; /* Hide any overflow from the image */
+            border-radius: 15px; /* Rounded corners for the button */
         }
 
         .click-button .fa-code {
-            font-size: 40px; /* Reduce icon size for mobile */
+            font-size: 80px;
             color: #4d9aff;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
+            transition: all 0.3s ease; /* Smooth icon animation */
         }
 
+        /* Updated text to just "Read" */
         .click-button span {
             display: block;
-            font-size: 14px; /* Reduce font size for mobile */
-            margin-top: 5px; /* Adjust spacing for mobile */
+            font-size: 20px;
+            margin-top: 10px;
         }
 
-        /* Simplify the message styles for mobile */
+        /* One-paragraph message */
         .message {
             display: none;
             text-align: center;
-            background-image: url('yeah.jpg');
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-            background-position: center center;
-            color: #fff;
-            border-radius: 15px;
-            padding: 10px; /* Adjust padding for mobile */
+            background-image: url('yeah.jpg'); /* Set the background image for the message */
+            background-size: 120% 100%; /* Enlarge the image to the fullest width, maintain aspect ratio */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            background-position: center center; /* Center the background image */
+            color: #fff; /* Updated text color to white */
+            border-radius: 15px; /* Apply an oblong radius */
+            padding: 20px; /* Padding for the message */
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 90%; /* Increase maximum width for mobile readability */
+            max-width: 80%; /* Set the maximum width for the message */
         }
 
         /* Animation on click */
         .click-button.clicked {
-            background-color: #3498db;
+            background-color: #3498db; /* Change background color */
+        }
+
+        /* Use the specified custom font ("Dancing Script") for the text starting from "So, I love you..." */
+        .message p {
+            font-family: 'Dancing Script', cursive;
         }
     </style>
 </head>
@@ -92,7 +103,7 @@
             // Show the message and hide the button
             clickButton.style.display = 'none';
             message.style.display = 'block';
-            clickButton.classList.add('clicked');
+            clickButton.classList.add('clicked'); // Add a class for the click animation
         });
     </script>
 </body>
